@@ -286,8 +286,9 @@ lab4data %>%
 # Q1: What is your overall conclusion about this variable’s normality? Why?
 
 The variables are normal because the p-values are all above 0.05 for
-each group.Despite the graphs not looking normally distributed the test
-shows normality.
+each group.It also shows normality because skew and kertosis are within
+the acceptable range. Despite the graphs not showing normality the tests
+(shapiro, ketrosis, and skew) show that it is normal.
 
 # Equal Variance between Groups
 
@@ -416,6 +417,11 @@ lab4data$Performance_log <- log10(lab4data$Performance) #adds new column then ru
 ```
 
 # Q3: Run the above tests again with the transformed outcome. Compare the differences in results.
+
+The data is normal and variances are equal as shown by the shapiro tests
+(p\>0.05 for each variable) for normality. And the levene test (p\>0.05
+for each variable) showing equal variance. This shows how transforming
+the data allowed for the analysis assumptions to be met.
 
 ``` r
 ggplot(lab4data, aes(x = Performance)) + geom_histogram(binwidth = 0.2) + theme_classic()
